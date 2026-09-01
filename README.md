@@ -41,6 +41,7 @@ It does not absorb neighboring module responsibilities. Core primitives stay in 
 - `gnalloy.org/transport-tcp` (`tcp`)
 
 ## Gnalloy Dependencies
+
 - `gnalloy.org/gnalloy`
 - `gnalloy.org/transport-zerocopy`
 

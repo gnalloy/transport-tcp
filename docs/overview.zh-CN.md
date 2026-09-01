@@ -19,10 +19,12 @@ Gnalloy 原生 TCP stream 传输，包含 ServerBootstrap 与 Dialer 集成。
 - `gnalloy.org/transport-tcp`（`tcp`）
 
 ## 直接 Gnalloy 依赖
+
 - `gnalloy.org/gnalloy`
 - `gnalloy.org/transport-zerocopy`
 
-## 当前模块规划中的直接下游
+## 当前仓库集合中的直接下游
+
 - `gnalloy.org/examples`
 
 ## 架构位置

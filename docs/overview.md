@@ -19,10 +19,12 @@ This module owns an I/O boundary. It creates or adapts Gnalloy Channels for a co
 - `gnalloy.org/transport-tcp` (`tcp`)
 
 ## Direct Gnalloy Dependencies
+
 - `gnalloy.org/gnalloy`
 - `gnalloy.org/transport-zerocopy`
 
-## Direct Dependents in the Current Module Plan
+## Direct Dependents in the Current Repository Set
+
 - `gnalloy.org/examples`
 
 ## Architecture Position
