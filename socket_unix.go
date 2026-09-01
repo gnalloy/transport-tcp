@@ -19,7 +19,7 @@ func newNativeReadWriter() channel.FDReadWriter {
 }
 
 func (nativeReadWriter) Read(fd transport.FDRef, dst []byte) (int, bool, error) {
-	n, err := unix.Read(fd.FD, dst)
+	n, err := readNonblocking(fd.FD, dst)
 	if isAgain(err) {
 		return n, true, nil
 	}
@@ -27,7 +27,7 @@ func (nativeReadWriter) Read(fd transport.FDRef, dst []byte) (int, bool, error) 
 }
 
 func (nativeReadWriter) Write(fd transport.FDRef, src []byte) (int, bool, error) {
-	n, err := unix.Write(fd.FD, src)
+	n, err := writeNonblocking(fd.FD, src)
 	if isAgain(err) {
 		return n, true, nil
 	}
@@ -35,7 +35,7 @@ func (nativeReadWriter) Write(fd transport.FDRef, src []byte) (int, bool, error)
 }
 
 func (nativeReadWriter) Writev(fd transport.FDRef, src [][]byte) (int, bool, error) {
-	n, err := unix.Writev(fd.FD, src)
+	n, err := writevNonblocking(fd.FD, src)
 	if isAgain(err) {
 		return n, true, nil
 	}
